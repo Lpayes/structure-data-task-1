@@ -93,25 +93,29 @@ public class App {
      //En Java, aunque los dos sirven para guardar listas de cosas, la diferencia es como comparar una caja de cartón con una bolsa de tela elástica.
      // 1) Tamaño fijo vs. Tamaño dinámico
      //----Arreglo (int[]): Es fijo. Si se crea de 4 espacios, solo le caben 4 cosas. Es como una caja de madera con divisiones: si se quiere meter una quinta cosa, simplemente no cabe,se tendría que tirar esa caja y construir una nueva desde cero.
+     
      //----ArrayList: Es dinámico : Esta se puede comparar como una fila de personas. Si llega alguien nuevo, simplemente se pone al final y la fila se hace más larga. No se tiene que reservar lugar desde el principio, la fila crece o se acorta según se necesite.
      // 2) Tipos primitivos vs clases envolventes
      //----Arreglo: Este acepta números "puros" (como int o double).
      //----ArrayList: Este si se pone un poco más exigente y pidiendo que los números vengan en "clases" (objetos). Por eso se ve que se usa Integer en lugar de int.
+     
      // 3) Métodos disponibles (add, remove, size, etc.) Para ArrayList
      //----.add(valor): Este es para meter datos. No tienes que decirle en qué posición; él simplemente lo pone al final de la fila.
      //----.remove(índice): Este sirve para sacar a alguien de la lista. Lo mejor es que, si see saca al que está en medio, los que estaban atrás se recorren solitos para cerrar el hueco. En un arreglo normal, ese espacio se quedaría vacío o tendrías que mover a todos tú mismo.
      //----.get(índice): Como aquí no se usan los corchetes [], usas este método para ver qué hay en una posición. Es como decir: "Oye, pásame lo que tiene el cajón número 2".
      //----.size(): En los arreglos usas .length, pero aquí usas .size(). Te dice exactamente cuántos elementos hay guardados en ese momento.
      //----.clear(): Si quieres vaciar toda la lista de un solo golpe y dejarla en blanco, usas este y ya está.
+     
      // 4) Rendimiento
      //----Arreglo (int[]): Esteves el campeón en velocidad. Como es una estructura muy simple y no cambia de tamaño, la computadora sabe exactamente dónde está cada dato. Gasta poquita memoria y procesa todo rapidamente.
      //----ArrayList: Es un poquito más pesado. Porque como es elastico, por dentro Java tiene que estar revisando si todavía hay espacio y si no hay, tiene que crear un nuevo espacio, nuevo más grande y pasar todo lo viejo a la nueva. Eso gasta un poquito más de memoria y tiempo.
+     
      // 5)¿Cuándo usar cada uno?
      //----Se usa un Arreglo (int[]) cuando: Ya se sabe el número exacto, se quiere velocidad máxima o se tiene una memoria limitada.
      //----Se usa un ArrayList cuando: No se tinen idea de cuantos datos llegaran, se estara borrando y metiendo contenido y por la comodidad del uso de los metodos como .add() y .remove() en lugar de andar peleándote con los índices [i].
     
-  // Lo movi al final para que no borre los datos antes de imprimirlos
-     // 3) Arrays.fill(arreglo, valor)
+ 
+     // 3) Arrays.fill(arreglo, valor) Lo movi al final para que no borre los datos antes de imprimirlos
      Arrays.fill(misNumeros, 0); // este sirve cuando quiero resetear el arreglo, es decir una forma de poner el mismo valor en todos los espacios. En mi caso puse el "0"
          // Ahora todos los espacios son cero: {0, 0, 0, 0}
      out.println("Arreglo reseteado.");
